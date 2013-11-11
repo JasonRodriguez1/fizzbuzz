@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>fizzbuzz</title>
+		<meta name="viewport" content="width=device-width", initial-scale="1.0">
+		<script src="js/jquery-1.10.2.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/scripts.js"></script>
+		<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
+		<link href="css/bootstrap-theme.min.css" rel="stylesheet" type="text/css" media="all">
+		<link href="css/styles.css" rel="stylesheet" type="text/css" media="all">
+	</head>
+	<body>
+		<h1>Welcome to the <strong>Fizzbuzz</strong> challenge!</h1>
+		<hr>
+		<div class="container">
+			<p>Fizzbuzzz is a coding challenge given to prospective programmers for years and has become famous (or should I say 'infamous') because of how many people fail this test miserably. Some chalk it up to nerves, some just don't know how to approach the problem but most people just get thrown off guard.</p>
+
+			<p>In reality, the challenge is super easy to accomplish. You just need to keep calm and remember the fundamentals you learned in school. Here we will show you how to break down the problem: </p>
+	    <br>
+	    <p><em>Ok, so the way this works is you need to print out the numbers 1 through 100. However, you need print <code>'Fizz'</code> if the number is divisible by 3, <code>'Buzz'</code> if the number is divisible by 5, and <code>'FizzBuzz'</code> if the number is divisible by both 3 and 5.</em></p> 
+
+	    <p>Let's start by setting up a <code>for</code> loop to iterate through the numbers :</em></p>
+			<code>for (var i = 1; 1 < 101; i++)</code>
+			<br>
+			<br>
+			<p><em>Great! Now, lets be sure we can print the results out :</em></p>
+	    <code>for (var i = 1; 1 < 101; i++){console.log(i)}</code>
+	    <br>
+	    <br>
+	    <p><em>Ok now the basic structure looks good but this won't do to suit our needs. We are going to need to meet some conditionals if this solution is ever going to get off the ground. In a problem like this, I like to look for commonalities with the conditions and the first thing that stands out in my mind is that 3 and 5 are both divisible by 15.</em></p> 
+
+	    <p>So, lets use this number with modulo to discover which integer gets assigned the FizzBuzz' value in our loop. We can apply this using an <code>if</code> condition inside our for loop (not forgetting to leave the number unchanged if it does not meet our condition) like so: </em></p>
+
+	    <code>for (var i = 1; i < 101; i++){if ((i % 15) === 0) {console.log('FizzBuzz');} else {console.log(i);}}</code>
+	    <br>
+	    <br>
+	    <p><em>With this, we can see that if there is no remainder, <code>'FizzBuzz'</code> is applied. Cool, right?</em></p>
+	    <br>
+	    <p><em>Great! So now we are approaching the home stretch. Now that our function is filtering out our dual condition, all we need to do is apply the same technique to find each condition individually. Lets add two more <code>else if</code>statements in order to assign <code>'Fizz'</code> and <code>'Buzz'</code> to whichever integers happen to meet one codition or the other :</em></p> 
+	    <p><code>for (var i = 1; i < 101; i++){</code>
+		  <code>if ((i % 15) === 0) {</code>
+			<code>console.log('FizzBuzz');</code>
+			<code>} else if ((i % 3) === 0){</code>
+			<code>console.log('Fizz');</code>
+			<code>} else if ((i % 5) === 0){</code>
+			<code>console.log('Buzz');</code>
+			<code>} else {</code>
+			<code>console.log(i);</code>
+			<code>}</code>
+		  <code>}</code></p>
+		  <br>
+		  <br>
+      <div id="results" class="container text-center">
+        <p>Click to view the results of the function we just wrote: </p>
+        <span id="fizzbuzz"></span>
+      </div>
+      <br>
+      <br>
+		  <p>Now that folks, is how it is done. See I told you it's not so bad! Just believe in yourself and don't over complicate things and you'll be just fine. Good luck!</p>
+    </div>
+	</body>
+</html>
